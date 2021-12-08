@@ -34,7 +34,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
       - name: Set up Selenoid
-        run: ./selenoid_start.sh
+        run: bash ./selenoid_start.sh
 
       - name: Run UI-Automation tests with Chrome browser
         run: ./gradlew -Pthread=3 -Plaunch=remote testChrome
