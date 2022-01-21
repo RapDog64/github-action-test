@@ -36,6 +36,6 @@ jobs:
       - name: Start selenoid
         run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
       - name: Make gradlew executable
-        run: chmod +x ./gradlew
+        run: chmod +x gradle
       - name: Build with Gradle
-        run: ./gradlew test
+        run: gradle test
