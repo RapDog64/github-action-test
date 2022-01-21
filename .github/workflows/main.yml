@@ -34,6 +34,6 @@ jobs:
             ${{ runner.os }}-gradle-
             
       - name: Start selenoid
-      - run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
+        run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
       - name: Run UI-Automation tests with Chrome browser
-      - run: ./gradlew clean test
+        run: ./gradlew clean test
