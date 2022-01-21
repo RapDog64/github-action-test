@@ -20,7 +20,18 @@ services:
               "/etc/selenoid/logs",
               "-service-startup-timeout", "3m0s",
               "-session-attempt-timeout", "3m0s",
-              "-session-delete-timeout"z, "3m0s",
+              "-session-delete-timeout", "3m0s",
               "-timeout", "5m0s"]
     ports:
       - "4444:4444"
+  selenoid-ui:
+    container_name: selenoid-ui
+    image: aerokube/selenoid-ui
+    network_mode: bridge
+    depends_on:
+      - selenoid
+    links:
+      - selenoid
+    ports:
+      - "8083:8080"
+    command: [ "--selenoid-uri","http://selenoid:4444" ]
