@@ -32,6 +32,7 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+            
       - name: Start selenoid
       - uses: Xotabu4/selenoid-github-action@v2
       - name: Run UI-Automation tests with Chrome browser
