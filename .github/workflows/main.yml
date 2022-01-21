@@ -37,7 +37,7 @@ jobs:
         run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
       - name: Build with Gradle
         run: gradle test
-          -
+
       - name: Deploy Allure report
         if: always()
         uses: peaceiris/actions-gh-pages@v2
