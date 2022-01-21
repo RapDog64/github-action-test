@@ -5,7 +5,6 @@ on:
 
   push:
     branches:
-      - 'master'
       - 'github-action'
 
 jobs:
@@ -33,9 +32,8 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-      - name: Set up Selenoid
-        run: bash ./selenoid_start.sh
-
+      - name: Start selenoid
+      - uses: Xotabu4/selenoid-github-action@v2
       - name: Run UI-Automation tests with Chrome browser
         run: ./gradlew clean test
 

@@ -20,7 +20,7 @@ services:
               "/etc/selenoid/logs",
               "-service-startup-timeout", "3m0s",
               "-session-attempt-timeout", "3m0s",
-              "-session-delete-timeout", "3m0s",
+              "-session-delete-timeout"z, "3m0s",
               "-timeout", "5m0s"]
     ports:
       - "4444:4444"
