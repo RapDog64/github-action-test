@@ -32,8 +32,22 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-            
+
       - name: Start selenoid
         run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
       - name: Build with Gradle
         run: gradle test
+          -
+      - name: Deploy Allure report
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: build/reports/allure-report
+
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: allure report
+          path: build/reports/allure-report
