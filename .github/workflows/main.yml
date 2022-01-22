@@ -35,9 +35,24 @@ jobs:
 
       - name: Start selenoid
         run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
+
+  lauch_tests:
+    runs-on: ubuntu-latest
+    env:
+     LANG: en_US.UTF-8
+     LC_CTYPE: en_US.UTF-8
+
+    steps:
       - name: Build with Gradle
         run: gradle test
 
+  deploy_report:
+    runs-on: ubuntu-latest
+    env:
+     LANG: en_US.UTF-8
+     LC_CTYPE: en_US.UTF-8
+
+    steps:
       - name: Generate Allure report
         if: always()
         run: gradle allureReport
