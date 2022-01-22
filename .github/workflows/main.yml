@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-          cache: gradle
 
       - name: Checkout
         uses: actions/checkout@v1
@@ -36,26 +35,9 @@ jobs:
 
       - name: Start selenoid
         run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
-
-  lauch_tests:
-    needs: [build]
-    runs-on: ubuntu-latest
-    env:
-     LANG: en_US.UTF-8
-     LC_CTYPE: en_US.UTF-8
-
-    steps:
       - name: Build with Gradle
         run: gradle test
 
-  deploy_report:
-    needs: [build, lauch_tests]
-    runs-on: ubuntu-latest
-    env:
-     LANG: en_US.UTF-8
-     LC_CTYPE: en_US.UTF-8
-
-    steps:
       - name: Generate Allure report
         if: always()
         run: gradle allureReport
