@@ -48,7 +48,7 @@ jobs:
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: build/reports/allure-report/allureReport
+          PUBLISH_DIR: build/reports/allure-report/allureReport/
 
       - uses: actions/upload-artifact@v2
         if: always()
