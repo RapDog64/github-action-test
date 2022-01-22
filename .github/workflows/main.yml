@@ -7,9 +7,6 @@ on:
     branches:
       - 'master'
 
-env:
-  GRADLE_BUILD_ACTION_CACHE_DEBUG_ENABLED: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,6 +19,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+          cache: gradle
 
       - name: Checkout
         uses: actions/checkout@v1
