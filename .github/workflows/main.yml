@@ -46,9 +46,9 @@ jobs:
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         env:
-          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: build/reports/allure-report
+          PUBLISH_DIR: build/reports/allure-report/allureReport
 
       - uses: actions/upload-artifact@v2
         if: always()
