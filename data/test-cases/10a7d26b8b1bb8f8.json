@@ -1,12 +1,12 @@
 {
-  "uid" : "538ec444b49767a5",
+  "uid" : "10a7d26b8b1bb8f8",
   "name" : "Log in as a user with valid credentials",
   "fullName" : "org.github.tests.LoginTest.loginTest",
   "historyId" : "1c4ee99df3e0024b3a7e921739f1d26a",
   "time" : {
-    "start" : 1642831433126,
-    "stop" : 1642831441813,
-    "duration" : 8687
+    "start" : 1642836386444,
+    "stop" : 1642836393061,
+    "duration" : 6617
   },
   "description" : "",
   "status" : "passed",
@@ -15,9 +15,9 @@
   "beforeStages" : [ {
     "name" : "beforeAll",
     "time" : {
-      "start" : 1642831433045,
-      "stop" : 1642831433061,
-      "duration" : 16
+      "start" : 1642836386348,
+      "stop" : 1642836386361,
+      "duration" : 13
     },
     "status" : "passed",
     "steps" : [ ],
@@ -30,8 +30,8 @@
   }, {
     "name" : "configureBrowser",
     "time" : {
-      "start" : 1642831433131,
-      "stop" : 1642831433136,
+      "start" : 1642836386449,
+      "stop" : 1642836386454,
       "duration" : 5
     },
     "status" : "passed",
@@ -49,17 +49,17 @@
     "steps" : [ {
       "name" : "Open login form",
       "time" : {
-        "start" : 1642831433141,
-        "stop" : 1642831438933,
-        "duration" : 5792
+        "start" : 1642836386460,
+        "stop" : 1642836390730,
+        "duration" : 4270
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "$(\"open\") http://demowebshop.tricentis.com/login",
         "time" : {
-          "start" : 1642831433228,
-          "stop" : 1642831438933,
-          "duration" : 5705
+          "start" : 1642836386533,
+          "stop" : 1642836390729,
+          "duration" : 4196
         },
         "status" : "passed",
         "steps" : [ ],
@@ -79,17 +79,17 @@
     }, {
       "name" : "Enter email",
       "time" : {
-        "start" : 1642831438934,
-        "stop" : 1642831439246,
-        "duration" : 312
+        "start" : 1642836390730,
+        "stop" : 1642836390971,
+        "duration" : 241
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "$(\"#Email\") set value(testing@email.ru)",
         "time" : {
-          "start" : 1642831439009,
-          "stop" : 1642831439246,
-          "duration" : 237
+          "start" : 1642836390777,
+          "stop" : 1642836390971,
+          "duration" : 194
         },
         "status" : "passed",
         "steps" : [ ],
@@ -109,17 +109,17 @@
     }, {
       "name" : "Enter password",
       "time" : {
-        "start" : 1642831439247,
-        "stop" : 1642831439420,
-        "duration" : 173
+        "start" : 1642836390971,
+        "stop" : 1642836391107,
+        "duration" : 136
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "$(\"#Password\") set value(testing)",
         "time" : {
-          "start" : 1642831439248,
-          "stop" : 1642831439420,
-          "duration" : 172
+          "start" : 1642836390972,
+          "stop" : 1642836391107,
+          "duration" : 135
         },
         "status" : "passed",
         "steps" : [ ],
@@ -139,17 +139,17 @@
     }, {
       "name" : "Click login button",
       "time" : {
-        "start" : 1642831439420,
-        "stop" : 1642831441195,
-        "duration" : 1775
+        "start" : 1642836391108,
+        "stop" : 1642836392473,
+        "duration" : 1365
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "$(\"By.xpath: //input[@value='Log in']\") click()",
         "time" : {
-          "start" : 1642831439420,
-          "stop" : 1642831441195,
-          "duration" : 1775
+          "start" : 1642836391108,
+          "stop" : 1642836392473,
+          "duration" : 1365
         },
         "status" : "passed",
         "steps" : [ ],
@@ -177,17 +177,17 @@
   "afterStages" : [ {
     "name" : "closeTheDriver",
     "time" : {
-      "start" : 1642831441699,
-      "stop" : 1642831441774,
-      "duration" : 75
+      "start" : 1642836392976,
+      "stop" : 1642836393049,
+      "duration" : 73
     },
     "status" : "passed",
     "steps" : [ {
       "name" : "$(\"webdriver\") close()",
       "time" : {
-        "start" : 1642831441700,
-        "stop" : 1642831441773,
-        "duration" : 73
+        "start" : 1642836392977,
+        "stop" : 1642836393045,
+        "duration" : 68
       },
       "status" : "passed",
       "steps" : [ ],
@@ -210,10 +210,10 @@
     "value" : "[engine:junit-jupiter]/[class:org.github.tests.LoginTest]/[method:loginTest()]"
   }, {
     "name" : "host",
-    "value" : "fv-az150-731"
+    "value" : "fv-az178-579"
   }, {
     "name" : "thread",
-    "value" : "2403@fv-az150-731.Test worker(1)"
+    "value" : "2319@fv-az178-579.Test worker(1)"
   }, {
     "name" : "framework",
     "value" : "junit-platform"
@@ -249,6 +249,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "538ec444b49767a5.json",
+  "source" : "10a7d26b8b1bb8f8.json",
   "parameterValues" : [ ]
 }
