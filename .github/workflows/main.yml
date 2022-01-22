@@ -45,7 +45,7 @@ jobs:
       - name: Deploy Allure report
         if: always()
         uses: peaceiris/actions-gh-pages@v3
-        env:
+        with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           publish_dir: build/reports/allure-report/allureReport
