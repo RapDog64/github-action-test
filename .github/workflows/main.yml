@@ -38,20 +38,20 @@ jobs:
       - name: Build with Gradle
         run: gradle test
 
-      - name: Test marketplace action
-        uses: simple-elf/allure-report-action@master
+      - name: Generate Allure report
         if: always()
-        id: allure-report
-        with:
-          allure_results: build/allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
+        run: ./gradlew allureReport
 
-      - name: Deploy report to Github Pages
+      - name: Deploy Allure report
         if: always()
         uses: peaceiris/actions-gh-pages@v2
         env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          TOKEN: ${{ secrets.TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+          PUBLISH_DIR: build/reports/allure-report
+
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: allure report
+          path: build/reports/allure-report
