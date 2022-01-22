@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Authentication",
+    "children" : [ {
+      "name" : "Log in with valid credentials",
+      "children" : [ {
+        "name" : "Log in as a user with valid credentials",
+        "uid" : "8e1af0bfe30573ad",
+        "parentUid" : "6b00dc4c35bacc48b2fa7ed209da5c58",
+        "status" : "passed",
+        "time" : {
+          "start" : 1642840293114,
+          "stop" : 1642840300827,
+          "duration" : 7713
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "6b00dc4c35bacc48b2fa7ed209da5c58"
+    } ],
+    "uid" : "3854915ee6a85d1a2a2021761c947c37"
+  } ],
+  "name" : "behaviors"
+}

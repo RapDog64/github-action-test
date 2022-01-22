@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Jan 22 08:31:33 UTC 2022","Sat Jan 22 08:31:40 UTC 2022","7713","","org.github.tests.LoginTest","","org.github.tests.LoginTest","loginTest","Log in as a user with valid credentials",""

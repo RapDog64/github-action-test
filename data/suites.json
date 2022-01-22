@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "org.github.tests.LoginTest",
+    "children" : [ {
+      "name" : "Log in as a user with valid credentials",
+      "uid" : "8e1af0bfe30573ad",
+      "parentUid" : "d5ff773669a57d6aeec9667b5c00358b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1642840293114,
+        "stop" : 1642840300827,
+        "duration" : 7713
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "d5ff773669a57d6aeec9667b5c00358b"
+  } ],
+  "name" : "suites"
+}
