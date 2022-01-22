@@ -37,6 +37,7 @@ jobs:
         run: curl -s https://aerokube.com/cm/bash | bash && ./cm selenoid start --browsers 'firefox:96.0;chrome:97.0'
 
   lauch_tests:
+    needs: [build]
     runs-on: ubuntu-latest
     env:
      LANG: en_US.UTF-8
@@ -47,6 +48,7 @@ jobs:
         run: gradle test
 
   deploy_report:
+    needs: [build, lauch_tests]
     runs-on: ubuntu-latest
     env:
      LANG: en_US.UTF-8
