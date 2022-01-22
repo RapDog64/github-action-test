@@ -4,13 +4,13 @@
     "name" : "org.github.tests.LoginTest",
     "children" : [ {
       "name" : "loginTest",
-      "uid" : "87b6cf1c114738eb",
+      "uid" : "538ec444b49767a5",
       "parentUid" : "8774872dfa8c9a8cc4c87ab82c860a9e",
       "status" : "passed",
       "time" : {
-        "start" : 1642831139405,
-        "stop" : 1642831145637,
-        "duration" : 6232
+        "start" : 1642831433126,
+        "stop" : 1642831441813,
+        "duration" : 8687
       },
       "flaky" : false,
       "newFailed" : false,
